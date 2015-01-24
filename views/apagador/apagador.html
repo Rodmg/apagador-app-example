@@ -1,0 +1,23 @@
+<div class="container" ng-controller="ApagadorController" ng-init="init()">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <h1>Apagador</h1>
+
+      <div class="alert alert-danger" ng-show="error">{{error}}</div>
+
+      <p>Activo: {{device.active}}</p>
+      <p>Estado: {{state}}</p>
+
+      <a href ng-click="toggle()"><i class="fa fa-4x" ng-class="{'fa-toggle-on': state == true, 'fa-toggle-off': state == false}"></i></a>
+
+      <div ng-show="device">
+        <h3>Detalles del dispositivo</h3>
+        <p>{{device}}</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
