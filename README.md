@@ -1,4 +1,4 @@
-# Ejemplo: Usando Servicios y creando una interfáz gráfica para ellos.
+# Ejemplo: Usando Servicios y creando una interfáz gráfica para ellos
 
 En esta ocación veremos un ejemplo sencillo de cómo utilizar los servicios
 para manejar el estado del LED rojo del Altair, y poder saber en cualquier momento cual es su estado
@@ -225,7 +225,7 @@ Además estaremos utilizando, aunque indirectamente, la API tipo REST del Servid
 "Factories" ya hechos, éstos son herramientas de Angular para facilitar el acceso a datos del servidor. Te recomendamos
 documentarte sobre este tipo de API's para entender mejor.
 
-Puedes descargar el código ya listo de aqui: ....
+Puedes descargar el código ya listo de aqui: https://github.com/Rodmg/apagador-app-example/archive/master.zip
 
 Verás que son bastantes archivos de código, sin embargo sólo nos interesarán los archivos js/controllers/apagadorController.js y views/led/apagador.html,
 ya que todo lo demás no es mas que el marco y las "Factories" que facilitan la programación.
@@ -367,3 +367,17 @@ Ahora veamos el código de la vista:
 </div>
 
 ```
+
+Éste es un archivo html con algunas cosas extras cortesía de Angular. En el primer ``div`` tenemos la directiva ``ng-controler``, que indica qué controlador
+vamos a utilizar para esta vista. También tenemos ``ng-init``, que indica qué función vamos a ejecutar al inicializar la vista.
+
+También podemos ver nombres entre corchetes dobles ``{{}}``, esto indica que se va a sustituir en este espacio el valor de la variable nombrada, actualizándose
+automáticamente al cambiar ésta.
+
+Tenemos ``ng-click``, que indica que función ejecutaremos al presionar dicho elemento; y ``ng-class``, que permite asignar clases css a un elemento de forma condicional,
+en este caso se utiliza para seleccionar el ícono correcto.
+
+## Conclusión
+
+Este fue sólo un ejemplo de cómo se pueden crear aplicaciones cliente con Angular y la API Aquila, sin embargo, no se ilustraron varias partes importantes, como el manejo
+de websockets para escuchar eventos y cambios en la red Aquila, así como el uso de Acciones y WSerial. Ésto lo estaremos viendo en futuros ejemplos.
